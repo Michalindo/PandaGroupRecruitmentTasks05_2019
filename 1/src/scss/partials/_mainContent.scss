@@ -1,0 +1,122 @@
+.mainContent{
+  display: flex;
+  flex-flow: column;
+  height: fit-content;
+  width: 100%
+}
+
+.logo {
+  height: 200px;
+  margin-bottom: 15px;
+  width: 100%;
+
+  @include tablet {
+    height: 320px;
+  }
+
+  @include desktop {
+    height: 550px;
+  }
+}
+
+.article {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: fit-content;
+  padding: 0 15px;
+
+  @include desktop {
+    align-items: flex-start;
+    flex-flow: row-reverse wrap;
+    padding: 0 200px;
+    justify-content: space-between;
+  }
+}
+
+.boxes-blue {
+  @include tablet {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-flow: column wrap;
+    width: 22%;
+    height: fit-content;
+    justify-content: flex-start;
+  }
+}
+
+.box {
+  width: 100%;
+  margin-bottom: 15px;
+
+  &-lightGreen{
+    height: 415px;
+    background-color: $article-lightGreenBox-color;
+
+    @include tablet{
+      height: 670px;
+    }
+
+    @include desktop{
+      height: 850px;
+      width: 75%;
+    }
+  }
+
+  &-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 205px;
+    background-color: $article-blueBox-color;
+
+    &:last-child {
+      @include tablet{ 
+        width: 100%;
+      }
+    }
+
+    @include tablet{ 
+      width: 49%;
+    }
+  }
+
+  &-text {
+    color: $text-color;
+    width: 90%;
+    font-size: 1.2rem;
+
+    @include desktop {
+      height: fit-content;
+      max-height: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &-red {
+    background-color: $article-redBox-color;
+    height: 270px;
+  }
+
+  &-green {
+    background-color: $article-greenBox-color;
+    height: 370px;
+
+    @include desktop {
+      padding: 0 200px;
+    }
+  }
+
+  &-mustard {
+    background-color: $article-mustardBox-color;
+    height: 370px;
+  }
+}

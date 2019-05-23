@@ -1,0 +1,15 @@
+.gallery {
+	display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+	width: 100%;
+	height: fit-content;
+	margin-top: 10px;
+}
+
+img {
+	width: 200px;
+	height: auto;
+	padding: 0 10px 10px 0;
+}
